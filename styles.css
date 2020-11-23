@@ -266,6 +266,7 @@ img {
     text-align: center;
     font-size: 2.5rem;
     margin: 30px 0 10px 0;
+    padding-right: 10px;
 }
 
 .meal-info p, h5 {
@@ -314,8 +315,8 @@ img {
     padding-bottom: 7%;
 }
 
-.popup img {
-    margin-bottom: 50px;
+.popup h5{
+    margin-top: 50px;
 }
 
 .youtube {
@@ -366,10 +367,45 @@ img {
         .form-control {
             width: 55%;
         }
+
+        .popup {
+            margin: 0 25px 0 25px;
+        }
+
+        .popup li {
+            font-size: 1.1rem;
+        }
+        
+        .popup p {
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+        
+        .popup h1{
+            font-size: 2rem;
+        }
+
+        .popup img {
+            width: 80%;
+            margin-left: 8%;
+
+        }
+        .video{
+            width:350px;
+            height:300px;
+        }
       }
+
       @media(max-width: 450px) {
         .logo {
             margin-top: -25px;
+        }
+        .video{
+            width:300px;
+            height:250px;
+        }
+        .popup h1{
+            font-size: 1.5rem;
         }
       }
 

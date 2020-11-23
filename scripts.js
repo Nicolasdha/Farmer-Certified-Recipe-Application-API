@@ -174,7 +174,7 @@ function showMealInfo(mealData) {
 
     // To link and initiate the provided YouTube URL from API 
     if(mealData.strYoutube){
-        youtubeText = `<h5><span class="">Watch this recipe come to life on YouTube:</span><iframe class="video" id="video" width= '515' height='400' src="${youtubeLink}?version=3&enablejsapi=1&origin=http://youtube.com" frameborder="0" allowfullscreen></iframe></h5>`
+        youtubeText = `<h5><span class="iframe">Watch this recipe come to life on YouTube:</span><iframe class="video" id="video" width= '515' height='400' src="${youtubeLink}?version=3&enablejsapi=1&origin=http://youtube.com" frameborder="0" allowfullscreen></iframe></h5>`
     } else {
         youtubeText = ''
     }
