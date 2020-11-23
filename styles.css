@@ -76,6 +76,11 @@ button:hover {
     z-index: 100;
 }
 
+.dropdown-menu-long{
+    overflow: scroll;
+    height: 80vh;
+}
+
 .dropdown-menu, .navbar {
     position: relative;
     z-index: 100;

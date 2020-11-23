@@ -12,6 +12,7 @@
 </head>
 
 <style>
+
 * {
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
@@ -32,7 +33,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background: #fff;
-    background-image: url(background.png);
+    background-image: url(/background.png);
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 3px;
     overflow: hidden;
@@ -88,6 +89,11 @@ button:hover {
 .dropdown-item {
     cursor: pointer;
     z-index: 100;
+}
+
+.dropdown-menu-long{
+    overflow: scroll;
+    height: 80vh;
 }
 
 .dropdown-menu, .navbar {
@@ -214,7 +220,6 @@ img {
 
 .active {
     color:rgb(206, 49, 49);
-    
 }
 
 .clr-button {
@@ -259,7 +264,7 @@ img {
 }
 
 .popup {
-    background-image: url(background.png);
+    background-image: url(/background.png);
     stroke-opacity : .1;
     max-width: 600px;
     width: 100%;
@@ -382,7 +387,6 @@ img {
             margin-top: -25px;
         }
       }
-
 </style>
 
 
