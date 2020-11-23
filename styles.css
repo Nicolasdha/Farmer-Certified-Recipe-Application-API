@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    transition: all .5s ease-out;
+}
+
+body {
+    margin:0;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.mobile-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    background-image: url(/background.png);
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+header {
+    height: 80px;
+    padding: 0;
+}
+
+header input{
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #dbdbdbd3;
+    font-family: inherit;
+    height: 35px;
+    width: 200px;
+}
+
+input::placeholder{
+    font-size: 0.7rem
+}
+
+header button {
+    background-color: transparent;
+    color: #aaa;
+    font-size: 1.5rem;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+button:hover {
+    background-color: rgba(230, 230, 230, 0.493);
+}
+
+.logo {
+    padding-left: 15px;
+    position: absolute;
+    left:0;
+    cursor: pointer;
+    z-index:1;
+    margin-top: -30px;
+}
+
+.nav-link {
+    font-size: 1.15rem;
+}
+
+.dropdown-item {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.dropdown-menu, .navbar {
+    position: relative;
+    z-index: 100;
+    margin: 0;
+}
+
+.nav-link {
+    margin-right: 10px;
+}
+
+.fav-container {
+    text-align: center;
+    background-color: #cac9c762;
+    margin: 0 auto;
+    border-radius: 7px;
+    max-width: fit-content;
+    box-shadow:  0 0 10px 2px #3333331A;
+}
+
+.fav-meals {
+    list-style-type: none;
+    padding:0 15px;
+    display: flex;
+    overflow: auto;
+}
+
+.fav-meals li {
+    width: 85px;
+    line-height: 13px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.fav-meals li img {
+    border: 2px solid #ffffff;
+    width: 80px;
+    height: 80px;  
+    object-fit: cover; 
+    border-radius: 50%;
+    box-shadow:  0 0 10px 2px #3333331A;
+}
+
+.fav-meals li span {
+    font-size: 0.9rem;
+}
+
+h3 {
+    margin:0;
+    padding-top: 5px;
+}
+
+.meals {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+
+.meal {
+    margin: 30px 1.5rem 0 1.5rem;
+    box-shadow:  0 0 10px 5px #33333341;
+    border-radius: 3px;
+    min-width: 200px;
+    max-width: 600px;
+    flex: 1;
+    position: relative;
+    height: 100%;
+    cursor:pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random { 
+    background-color: white;
+    position: absolute;
+    top: 1.2rem;
+    border-radius: 0 3px 3px 0;
+    color:gray;
+    padding: 0.25rem 0.5rem;
+}
+
+.meal-header img {
+    border-radius: 5px 5px 0 0;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.973);    
+    margin-top: -7px;
+}
+
+.meal-body h4 {
+    margin: 0 10% 0 0;
+    font-size: 1rem;
+    
+}
+
+.fav-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color:rgb(177, 176, 176);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 257px;
+    z-index: 1;
+    outline: none;
+}
+
+.active {
+    color:rgb(206, 49, 49);
+}
+
+.clr-button {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    right:30px;
+    padding:0;
+    margin:0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.479);
+    border: none;
+    opacity: 0;
+}
+
+.fav-meals:hover .clr-button {
+    opacity: 0.6;
+}
+
+.fav-meals::-webkit-scrollbar {
+    height: 4px;
+}
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgb(172, 172, 172);
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: blue;
+    } 
+
+.popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 100;
+}
+
+.popup {
+    background-image: url(/background.png);
+    stroke-opacity : .1;
+    max-width: 600px;
+    width: 100%;
+    overflow: auto;
+    padding: 0 2rem;
+    border-radius: 5px;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.popup h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 30px 0 10px 0;
+}
+
+.meal-info p, h5 {
+    text-align: center;
+    line-height: 25px;
+}
+
+.meal-info p {
+    font-style: normal;
+    margin-top: 30px;
+}
+
+.meal-info img {
+    border-radius: 5px;
+}
+
+.popup .close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.popup-container.hidden {
+    pointer-events: none;
+    display: none;
+}
+
+.hidden {
+    pointer-events: none;
+    display: none;
+}
+
+.popup-container.hidden h5 iframe {
+    display: none;
+}
+
+.popup li, .popup h3 {
+    font-size:1.3rem;
+}
+
+.popup li:last-child {
+    padding-bottom: 7%;
+}
+
+.popup img {
+    margin-bottom: 50px;
+}
+
+.youtube {
+    font-size: 1.2rem;
+}
+
+@media(max-width: 992px) {
+    .logo {
+        margin-top: -40px;
+        }
+        .form-control{
+            width: 24%;
+        }
+    }
+    
+    @media(max-width: 768px) {
+        .logo {
+            margin-top: -35px;
+            }
+            .form-control{
+                width: 250px;
+            }
+        }
+        
+    
+    @media(max-width: 576px) {
+        .meal {
+            width: 325px;
+        }
+    
+        .fav-container {
+            max-width: 400px;
+        }
+       
+        header input {
+            width: 40px;
+        }
+        
+        header button {
+            margin-left: 10px;
+        }
+        
+        .logo {
+            max-width: 50%;
+            height: auto;
+        }
+    
+        .form-control {
+            width: 55%;
+        }
+      }
+      @media(max-width: 450px) {
+        .logo {
+            margin-top: -25px;
+        }
+      }

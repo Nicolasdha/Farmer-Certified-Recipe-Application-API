@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link href="/favicon1.png" rel="icon" type="image/x-icon" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Certified | Recipe Inspiration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<!-- Farmer Certified Recipe Inspiration -->
+<body>
+    <div class="mobile-container">
+<!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#"><img class="logo" id="logo" src="/logo.png" alt="Farmer Certified Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Locale</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item area">American</a>
+                <a class="dropdown-item area">British</a>
+                <a class="dropdown-item area">Canadian</a>
+                <a class="dropdown-item area">Chinese</a>
+                <a class="dropdown-item area">Dutch</a>
+                <a class="dropdown-item area">Egyptian</a>
+                <a class="dropdown-item area">French</a>
+                <a class="dropdown-item area">Greek</a>
+                <a class="dropdown-item area">Indian</a>
+                <a class="dropdown-item area">Irish</a>
+                <a class="dropdown-item area">Italian</a>
+                <a class="dropdown-item area">Jamaican</a>
+                <a class="dropdown-item area">Japanese</a>
+                <a class="dropdown-item area">Kenyan</a>
+                <a class="dropdown-item area">Malaysian</a>
+                <a class="dropdown-item area">Mexican</a>
+                <a class="dropdown-item area">Moroccan</a>
+                <a class="dropdown-item area">Polish</a>
+                <a class="dropdown-item area">Russian</a>
+                <a class="dropdown-item area">Spanish</a>
+                <a class="dropdown-item area">Thai</a>
+                <a class="dropdown-item area">Tunisian</a>
+                <a class="dropdown-item area">Turkish</a>
+                <a class="dropdown-item area">Vietnamese</a>
+                <a class="dropdown-item area">Unknown</a>
+            </div>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Categories</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item category">Beef</a>
+                <a class="dropdown-item category">Chicken</a>
+                <a class="dropdown-item category">Goat</a>
+                <a class="dropdown-item category">Lamb</a>
+                <a class="dropdown-item category">Pork</a>
+                <a class="dropdown-item category">Seafood</a>
+                <a class="dropdown-item category">Breakfast</a>
+                <a class="dropdown-item category">Pasta</a>
+                <a class="dropdown-item category">Starter</a>
+                <a class="dropdown-item category">Side</a>
+                <a class="dropdown-item category">Dessert</a>
+                <a class="dropdown-item category">Vegetarian</a>
+                <a class="dropdown-item category">Vegan</a>
+                <a class="dropdown-item category">Miscellaneous</a>
+            </div>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0"> 
+            <input class="form-control mr-sm-2" id="search-term" type="text" placeholder="Search ingredient, dish, locale, category..." aria-label="Search">
+            <button id="search" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+</header>
+<!-- Navbar End-->
+
+<!-- Favorite Meals Container -->
+<div class="container">
+    <div class="fav-container">
+        <h3>Favorite Meals</h3>
+        <ul class="fav-meals" id="fav-meals">
+        </ul>
+    </div>
+</div>
+<!-- Favorite Meals Container End-->
+
+
+<!-- Meals Container -->
+<div class="meals" id="meals">
+</div>
+</div>
+
+<!-- Initially Hidden Meal Info Container -->
+<div id="meal-popup" class="popup-container hidden">
+    <div class="popup" id="popup">
+        <button class="close-popup" id="close-popup"><i class="fas fa-times"></i></button>
+        <div class="meal-info" id="meal-info">
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+    <script src="/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+</body>
+</html>
