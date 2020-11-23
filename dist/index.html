@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link href="favicon1.png" rel="icon" type="image/x-icon" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Certified | Recipe Inspiration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    transition: all .5s ease-out;
+}
+
+body {
+    margin:0;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.mobile-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    background-image: url(background.png);
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+header {
+    height: 80px;
+    padding: 0;
+}
+
+header input{
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #dbdbdbd3;
+    font-family: inherit;
+    height: 35px;
+    width: 200px;
+}
+
+input::placeholder{
+    font-size: 0.7rem
+}
+
+header button {
+    background-color: transparent;
+    color: #aaa;
+    font-size: 1.5rem;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+button:hover {
+    background-color: rgba(230, 230, 230, 0.493);
+}
+
+.logo {
+    padding-left: 15px;
+    position: absolute;
+    left:0;
+    cursor: pointer;
+    z-index:1;
+    margin-top: -30px;
+}
+
+.nav-link {
+    font-size: 1.15rem;
+}
+
+.dropdown-item {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.dropdown-menu-long {
+    overflow: scroll;
+    height: 80vh;
+}
+
+.dropdown-menu, .navbar {
+    position: relative;
+    z-index: 100;
+    margin: 0;
+}
+
+.nav-link {
+    margin-right: 10px;
+}
+
+.fav-container {
+    text-align: center;
+    background-color: #cac9c762;
+    margin: 0 auto;
+    border-radius: 7px;
+    max-width: fit-content;
+    box-shadow:  0 0 10px 2px #3333331A;
+}
+
+.fav-meals {
+    list-style-type: none;
+    padding:0 15px;
+    display: flex;
+    overflow: auto;
+}
+
+.fav-meals li {
+    width: 85px;
+    line-height: 13px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.fav-meals li img {
+    border: 2px solid #ffffff;
+    width: 80px;
+    height: 80px;  
+    object-fit: cover; 
+    border-radius: 50%;
+    box-shadow:  0 0 10px 2px #3333331A;
+}
+
+.fav-meals li span {
+    font-size: 0.9rem;
+}
+
+h3 {
+    margin:0;
+    padding-top: 5px;
+}
+
+.meals {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+
+.meal {
+    margin: 30px 1.5rem 0 1.5rem;
+    box-shadow:  0 0 10px 5px #33333341;
+    border-radius: 3px;
+    min-width: 200px;
+    max-width: 600px;
+    flex: 1;
+    position: relative;
+    height: 100%;
+    cursor:pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random { 
+    background-color: white;
+    position: absolute;
+    top: 1.2rem;
+    border-radius: 0 3px 3px 0;
+    color:gray;
+    padding: 0.25rem 0.5rem;
+}
+
+.meal-header img {
+    border-radius: 5px 5px 0 0;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.973);    
+    margin-top: -7px;
+}
+
+.meal-body h4 {
+    margin: 0 10% 0 0;
+    font-size: 1rem;
+    
+}
+
+.fav-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color:rgb(177, 176, 176);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 257px;
+    z-index: 1;
+    outline: none;
+}
+
+.active {
+    color:rgb(206, 49, 49);
+}
+
+.clr-button {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    right:30px;
+    padding:0;
+    margin:0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.479);
+    border: none;
+    opacity: 0;
+}
+
+.fav-meals:hover .clr-button {
+    opacity: 0.6;
+}
+
+.fav-meals::-webkit-scrollbar {
+    height: 4px;
+}
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgb(172, 172, 172);
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: blue;
+    } 
+
+.popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 100;
+}
+
+.popup {
+    background-image: url(background.png);
+    stroke-opacity : .1;
+    max-width: 600px;
+    width: 100%;
+    overflow: auto;
+    padding: 0 2rem;
+    border-radius: 5px;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.popup h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 30px 0 10px 0;
+    padding-right: 10px;
+}
+
+.meal-info p, h5 {
+    text-align: center;
+    line-height: 25px;
+}
+
+.meal-info p {
+    font-style: normal;
+    margin-top: 30px;
+}
+
+.meal-info img {
+    border-radius: 5px;
+}
+
+.popup .close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.popup-container.hidden {
+    pointer-events: none;
+    display: none;
+}
+
+.hidden {
+    pointer-events: none;
+    display: none;
+}
+
+.popup-container.hidden h5 iframe {
+    display: none;
+}
+
+.popup li, .popup h3 {
+    font-size:1.3rem;
+}
+
+.popup li:last-child {
+    padding-bottom: 7%;
+}
+
+.popup h5{
+    margin-top: 50px;
+}
+
+.youtube {
+    font-size: 1.2rem;
+}
+
+@media(max-width: 992px) {
+    .logo {
+        margin-top: -40px;
+        }
+        .form-control{
+            width: 24%;
+        }
+    }
+    
+    @media(max-width: 768px) {
+        .logo {
+            margin-top: -35px;
+            }
+            .form-control{
+                width: 250px;
+            }
+        }
+        
+    
+    @media(max-width: 576px) {
+        .meal {
+            width: 325px;
+        }
+    
+        .fav-container {
+            max-width: 400px;
+        }
+       
+        header input {
+            width: 40px;
+        }
+        
+        header button {
+            margin-left: 10px;
+        }
+        
+        .logo {
+            max-width: 50%;
+            height: auto;
+        }
+    
+        .form-control {
+            width: 55%;
+        }
+
+        .popup {
+            margin: 0 25px 0 25px;
+        }
+
+        .popup li {
+            font-size: 1.1rem;
+        }
+        
+        .popup p {
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+        
+        .popup h1{
+            font-size: 2rem;
+        }
+
+        .popup img {
+            width: 80%;
+            margin-left: 8%;
+
+        }
+        .video{
+            width:350px;
+            height:300px;
+        }
+      }
+
+      @media(max-width: 450px) {
+        .logo {
+            margin-top: -25px;
+        }
+        .video{
+            width:300px;
+            height:250px;
+        }
+        .popup h1{
+            font-size: 1.5rem;
+        }
+      }
+
+
+      
+</style>
+
+
+<!-- Farmer Certified Recipe Inspiration -->
+<body>
+    <div class="mobile-container">
+<!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#"><img class="logo" id="logo" src="logo.png" alt="Farmer Certified Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Locale</a>
+                <div class="dropdown-menu dropdown-menu-long" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item area">American</a>
+                <a class="dropdown-item area">British</a>
+                <a class="dropdown-item area">Canadian</a>
+                <a class="dropdown-item area">Chinese</a>
+                <a class="dropdown-item area">Dutch</a>
+                <a class="dropdown-item area">Egyptian</a>
+                <a class="dropdown-item area">French</a>
+                <a class="dropdown-item area">Greek</a>
+                <a class="dropdown-item area">Indian</a>
+                <a class="dropdown-item area">Irish</a>
+                <a class="dropdown-item area">Italian</a>
+                <a class="dropdown-item area">Jamaican</a>
+                <a class="dropdown-item area">Japanese</a>
+                <a class="dropdown-item area">Kenyan</a>
+                <a class="dropdown-item area">Malaysian</a>
+                <a class="dropdown-item area">Mexican</a>
+                <a class="dropdown-item area">Moroccan</a>
+                <a class="dropdown-item area">Polish</a>
+                <a class="dropdown-item area">Russian</a>
+                <a class="dropdown-item area">Spanish</a>
+                <a class="dropdown-item area">Thai</a>
+                <a class="dropdown-item area">Tunisian</a>
+                <a class="dropdown-item area">Turkish</a>
+                <a class="dropdown-item area">Vietnamese</a>
+                <a class="dropdown-item area">Unknown</a>
+            </div>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Categories</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item category">Beef</a>
+                <a class="dropdown-item category">Chicken</a>
+                <a class="dropdown-item category">Goat</a>
+                <a class="dropdown-item category">Lamb</a>
+                <a class="dropdown-item category">Pork</a>
+                <a class="dropdown-item category">Seafood</a>
+                <a class="dropdown-item category">Breakfast</a>
+                <a class="dropdown-item category">Pasta</a>
+                <a class="dropdown-item category">Starter</a>
+                <a class="dropdown-item category">Side</a>
+                <a class="dropdown-item category">Dessert</a>
+                <a class="dropdown-item category">Vegetarian</a>
+                <a class="dropdown-item category">Vegan</a>
+                <a class="dropdown-item category">Miscellaneous</a>
+            </div>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0"> 
+            <input class="form-control mr-sm-2" id="search-term" type="text" placeholder="Search ingredient, dish, locale, category..." aria-label="Search">
+            <button id="search" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+</header>
+<!-- Navbar End-->
+
+<!-- Favorite Meals Container -->
+<div class="container">
+    <div class="fav-container">
+        <h3>Favorite Meals</h3>
+        <ul class="fav-meals" id="fav-meals">
+        </ul>
+    </div>
+</div>
+<!-- Favorite Meals Container End-->
+
+
+<!-- Meals Container -->
+<div class="meals" id="meals">
+</div>
+</div>
+
+<!-- Initially Hidden Meal Info Container -->
+<div id="meal-popup" class="popup-container hidden">
+    <div class="popup" id="popup">
+        <button class="close-popup" id="close-popup"><i class="fas fa-times"></i></button>
+        <div class="meal-info" id="meal-info">
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+    <script>
+// Variable Bindings
+const mealsEl = document.getElementById('meals');
+const favoriteContainer  = document.getElementById('fav-meals');
+let searchTerm = document.getElementById('search-term');
+const searchBtn = document.getElementById('search');
+const mealPopup = document.getElementById('meal-popup')
+const popupCloseBtn = document.getElementById('close-popup')
+const mealInfoEl = document.getElementById('meal-info')
+const logo =  document.getElementById('logo')
+const area = document.querySelectorAll(".area")
+const category = document.querySelectorAll(".category")
+const burgerIcon = document.querySelector(".navbar-toggler")
+const navbar = document.querySelector(".navbar")
+let youtubeText;
+const proxy = "https://fierce-stream-08080.herokuapp.com/"
+const form = document.querySelector(".form-inline")
+
+
+//Initially load 12 meals to page
+for(let i=0; i < 12; i++){
+    getRandomMeal();
+}
+//Fill in Favorite Meals - or add 8 stock ones
+fetchFavMeals();
+
+// Function to retrive random meals from API
+async function getRandomMeal(){
+    let randomApi = `${proxy}https://www.themealdb.com/api/json/v1/1/random.php`;
+    const response = await fetch(randomApi);
+    const data = await response.json();
+    const randomMeal = data.meals[0];
+    addMeal(randomMeal, true);
+}
+
+// Function to retrive meals by ID from API
+async function getMealById(id){
+    let idApi = `${proxy}https://www.themealdb.com/api/json/v1/1/lookup.php?i=`+id;
+    const response = await fetch(idApi)
+    const data = await response.json();
+    const meal = data.meals[0];
+    return meal;
+}
+
+// Function to retrive meals by searching term/name
+async function getmealsBySearch(term){
+    let termApi = `${proxy}https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`;
+    const response = await fetch(termApi);
+    const data = await response.json();
+    const meals = data.meals;
+    return meals;
+}
+
+// Function to add each meal and each favorite icon to DOM
+function addMeal(mealData, random = false) {
+    const meal = document.createElement('div');
+    meal.classList.add('meal');
+    const heart = document.createElement('button');
+    heart.classList.add('fav-btn')
+
+    heart.innerHTML = `<i class="fas fa-heart"></i>`
+    meal.innerHTML= `
+        <div class="meal-header">
+       ${random ? `  <span class="random">Random Recipe</span>` : ``}
+            <img class ="imageId" src=${mealData.strMealThumb} alt="${mealData.strMeal}">
+        </div>
+        <div class="meal-body">
+            <h4>${mealData.strMeal}</h4>
+        </div>`;
+
+    // Event listener to add/remove meal to favorites when heart icon is clicked and reload page
+    heart.addEventListener("click", () => {
+        if(heart.classList.contains('active')){
+            removeMealFromLocalStorage(mealData.idMeal);
+            heart.classList.remove('active');
+        } else {
+            addMealToLocalStorage(mealData.idMeal);
+            heart.classList.add('active');
+        }
+        fetchFavMeals();
+        }, false);
+
+    // Event listener to show meal information
+    meal.addEventListener('click', () => {
+        showMealInfo(mealData);
+        }, true);
+
+    mealsEl.appendChild(meal);
+    meal.appendChild(heart);
+}
+
+// Function to add meal to local browser storage
+function addMealToLocalStorage(mealId){
+    const mealIds = getMealsFromLocalStorage();
+    localStorage.setItem('mealIds', JSON.stringify([...mealIds, mealId]));
+}
+
+// Function to remove meal to local browser storage
+function removeMealFromLocalStorage(mealId) {
+    const mealIds = getMealsFromLocalStorage();
+    localStorage.setItem('mealIds', JSON.stringify(mealIds.filter(id=> id !== mealId)));
+}
+
+// Function to get all favorite meals from local browser storage or add stock favorite meals if none
+function getMealsFromLocalStorage(mealId){
+    const mealIds = JSON.parse(localStorage.getItem('mealIds'));
+    return mealIds === null ? ["52852","52838","52921","53019","52773","52910","52904"] : mealIds;
+}
+
+// Function to gather all favorite meals
+async function fetchFavMeals(){
+
+   // To clean the container
+   favoriteContainer.innerHTML = '';
+
+    const mealIds = getMealsFromLocalStorage();
+    for(let i=0; i<mealIds.length;i++) {
+        const mealId = mealIds[i];
+        meal = await getMealById(mealId);
+        addMealToFav(meal);
+    }
+}
+
+// Function to append each favorite meal to favorite meal container
+function addMealToFav(mealData) {
+    const favMeal = document.createElement('div');
+    favMeal.classList.add("img-container");
+    const xbox = document.createElement('button');
+    xbox.classList.add("clr-button");
+    xbox.innerHTML = ` <i class="fas fa-window-close clear"></i>`
+    let shortMeal = mealData.strMeal;
+    if(shortMeal.length > 30){
+         shortMeal= shortMeal.substring(0,29) + '...'
+    }else{
+        shortMeal = shortMeal
+    }
+   
+    favMeal.innerHTML= `
+            <li>
+                <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}">
+                    <span>${shortMeal}</span>
+            </li>`
+
+            const btn = xbox.querySelector('.clear');
+
+            // Event listener to remove meal from favorite meals
+            btn.addEventListener("click", () => {
+                removeMealFromLocalStorage(mealData.idMeal);
+                fetchFavMeals();
+            }, false);
+
+            // Event listener to show favorite meal info
+            favMeal.addEventListener('click', () => {
+                showMealInfo(mealData);
+            }, false);
+    
+        favoriteContainer.appendChild(favMeal);
+        favoriteContainer.appendChild(xbox);
+}
+
+// Function to show meal information
+function showMealInfo(mealData) {
+    // To clean up container
+    mealInfoEl.innerHTML='';
+    const mealEl = document.createElement('div');
+    const youtubeLink = mealData.strYoutube.replace(/(watch\?v=)/, "embed/");
+    const ingredients = [];
+
+    // To get ingredients and measurements
+    for(let i=0; i<20; i++) {
+        if(mealData['strIngredient'+i]) {
+            ingredients.push(`${mealData['strIngredient' + i]} - ${mealData['strMeasure' + i]}`)
+        } 
+    }
+
+    // To link and initiate the provided YouTube URL from API 
+    if(mealData.strYoutube){
+        youtubeText = `<h5><span class="">Watch this recipe come to life on YouTube:</span><iframe class="video" id="video" width= '515' height='400' src="${youtubeLink}?version=3&enablejsapi=1&origin=http://youtube.com" frameborder="0" allowfullscreen></iframe></h5>`
+    } else {
+        youtubeText = ''
+    }
+
+    mealEl.innerHTML = `
+    <h1>${mealData.strMeal}</h1>
+    <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}"/>
+        ${youtubeText}
+        <p>${mealData.strInstructions}</p>
+        <h3> Ingredients </h3
+    <ul>   
+       ${ingredients.map(ing => 
+           `<li>${ing}</li>`).join('')
+        }
+    </ul>`
+
+    mealInfoEl.appendChild(mealEl);
+
+    // Shows hidden popup full of meal info
+    mealPopup.classList.remove('hidden');
+}
+
+// Function to search API with the user input
+async function searchMeals(){
+    const search = searchTerm.value;
+    const meals =  await getmealsBySearch(search);
+    const mealsCategory = await getMealsCategory(search);
+    const mealsArea = await getMealsArea(search)
+    const mealsIngredient = await getMealsIngredient(search)
+    mealsEl.innerHTML = '';
+        if(meals) {
+            meals.forEach((meal) => {
+                getMealBySearch(meal.idMeal);
+                });
+            }
+        if(mealsCategory){
+            mealsCategory.forEach((mealCat) =>{
+                getMealBySearch(mealCat.idMeal);
+                })
+            }
+        if(mealsArea){
+            mealsArea.forEach((mealArea) =>{
+                getMealBySearch(mealArea.idMeal);
+                })
+            }
+        if (mealsIngredient) {
+            mealsIngredient.forEach((mealIngredient) => {
+                getMealBySearch(mealIngredient.idMeal);
+                })
+            }
+}
+
+// Function to display all meals from user input since API only returns specific meal ID when searched individually (not all meal information)
+async function getMealBySearch(id){
+    let idApi = `${proxy}https://www.themealdb.com/api/json/v1/1/lookup.php?i=`+id;
+    const response = await fetch(idApi)
+    const data = await response.json();
+    const meal = data.meals[0];
+    addMeal(meal);
+}
+
+// Function to search for user input by category
+async function getMealsCategory(search){
+
+    let categoryApi = `${proxy}https://www.themealdb.com/api/json/v1/1/filter.php?c=${search}`
+
+    const response = await fetch(categoryApi);
+    const data = await response.json();
+    const meals = data.meals;
+    return meals
+}
+
+// Function to search for user input by locale
+async function getMealsArea(search){
+    const areaApi = `${proxy}https://www.themealdb.com/api/json/v1/1/filter.php?a=${search}`
+    const response = await fetch(areaApi);
+    const data = await response.json();
+    const meals = data.meals;
+    return meals
+}
+
+// Function to search for user input by ingredient
+async function getMealsIngredient(search){
+    const ingredientApi = `${proxy}https://www.themealdb.com/api/json/v1/1/filter.php?i=${search}`
+    const response = await fetch(ingredientApi);
+    const data = await response.json();
+    const meals = data.meals;
+    return meals
+}
+
+// Function to stop video playback 
+function stopVideo(){
+    let link = document.querySelector('#video');
+    link.src = '';
+}
+
+// Function to toggle logo and navbar background menu on/off with an interval between
+function toggleLogoNavbar(){
+    logo.classList.toggle("hidden")
+    navbar.classList.toggle("bg-light")
+    burgerIcon.disabled = false;
+    setTimeout(function(){
+        burgerIcon.disabled = true;
+        setTimeout(function(){
+            burgerIcon.disabled = false;
+        },1000);
+    },0);
+}
+
+// Closes/hides meal information container
+popupCloseBtn.addEventListener('click', () => {
+    mealPopup.classList.add('hidden');
+    stopVideo();
+})
+
+// Initializes Esc key for close/hide meal information container
+document.addEventListener('keydown', function(event) {
+    const key = event.key; // const {key} = event; in ES6+
+    if (key === "Escape") {
+        mealPopup.classList.add('hidden');
+        stopVideo();
+    }
+});
+
+// Reloads page on logo click
+logo.addEventListener('click', () => {
+    location.reload()
+})
+
+// Event listener to search API for user input
+searchBtn.addEventListener('click', searchMeals, false)
+
+// Initializes Enter key to search API for user input
+document.addEventListener('keydown', async (event) => {
+    const key = event.key
+    if (key === 'Enter') {
+        searchMeals
+    }
+})
+
+// Event listener to search API for every locale in navbar
+area.forEach(element=> {
+    element.addEventListener('click', async (e)=> {
+        const eventTarget = e.target.textContent
+        const areaMeal = await getMealsArea(eventTarget)
+        mealsEl.innerHTML = '';
+
+        areaMeal.forEach((meal) => {
+            getMealBySearch(meal.idMeal)
+            })
+    })
+})
+
+// Event listener to search API for every category in navbar
+category.forEach(element=> {
+    element.addEventListener('click', async (e)=> {
+        const eventTarget = e.target.textContent
+        const categoryMeal = await getMealsCategory(eventTarget)
+        mealsEl.innerHTML = '';
+
+        categoryMeal.forEach((meal) => {
+            getMealBySearch(meal.idMeal)
+            })
+    })
+})
+
+// Event listener to prevent form submitting
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+})
+
+// Event listener to toggle logo on/off and navbar background on burger menu click
+document.addEventListener('DOMContentLoaded', () => {
+    burgerIcon.addEventListener('click', toggleLogoNavbar, false)})
+    
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+</body>
+</html>
