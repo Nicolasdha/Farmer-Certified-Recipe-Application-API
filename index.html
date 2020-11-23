@@ -33,7 +33,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background: #fff;
-    background-image: url(/background.png);
+    background-image: url(background.png);
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 3px;
     overflow: hidden;
@@ -73,6 +73,11 @@ button:hover {
     background-color: rgba(230, 230, 230, 0.493);
 }
 
+.dropdown-menu-long {
+    overflow: scroll;
+    height: 80vh;
+}
+
 .logo {
     padding-left: 15px;
     position: absolute;
@@ -91,7 +96,7 @@ button:hover {
     z-index: 100;
 }
 
-.dropdown-menu-long{
+.dropdown-menu-long {
     overflow: scroll;
     height: 80vh;
 }
@@ -264,7 +269,7 @@ img {
 }
 
 .popup {
-    background-image: url(/background.png);
+    background-image: url(background.png);
     stroke-opacity : .1;
     max-width: 600px;
     width: 100%;
@@ -387,6 +392,8 @@ img {
             margin-top: -25px;
         }
       }
+
+      
 </style>
 
 
@@ -404,7 +411,7 @@ img {
             <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Locale</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu dropdown-menu-long" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item area">American</a>
                 <a class="dropdown-item area">British</a>
                 <a class="dropdown-item area">Canadian</a>
