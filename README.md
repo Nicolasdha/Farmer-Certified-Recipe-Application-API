@@ -57,7 +57,5 @@ The search bar is quite powerful with the ability to search for different locale
 
 Whenever you may get curious about a certain dish you just have to click on it, and that brings up a window with all of the ingredients and steps needed to create the dish; all without taking you to a different page altogether. Almost every recipe has a YouTube video included with it to watch or follow along with as well. These provide useful insight from someone who is well versed in cooking this specific dish.
 
-The database is created, hosted and provided by TheMealDB.Com
-
 Thank you for visiting! <br><br><br>
 ![Logo](https://i.ibb.co/nr2trL4/Screen-Shot-2020-09-08-at-4-20-44-PM.png)
