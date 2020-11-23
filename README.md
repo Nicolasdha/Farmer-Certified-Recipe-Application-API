@@ -23,7 +23,7 @@ This application was created using the following technologies:
 | :----------- | :------------: |
 |    HTML     |   CSS|
 | Javascript|   Bootstrap4 |
-|TheMealDatabase API | Github Pages|
+|TheMealDatabase | Github Pages|
 | Font Awesome   |                |
 
 
