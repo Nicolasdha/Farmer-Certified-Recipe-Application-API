@@ -10,13 +10,11 @@ Hello! This is a user-friendly recipe application that generates random recipes 
 You are able to search the database through API calls about a recipe's name, category, ingredients, or even where they originate from! Please utilize this application
 to the fullest to learn more about recipes from different cultures, or to help break the everyday monotony of your kitchen's staples.
 
-
 ## Table of Contents
-  * <a href= https://github.com/Nicolasdha/Farmer-Certified-Recipe-Appication-API#Technologies>Technologies</a>
-  * <a href= https://github.com/Nicolasdha/Farmer-Certified-Recipe-Appication-API#Launch>Launch</a>
-  * <a href= https://github.com/Nicolasdha/Farmer-Certified-Recipe-Appication-API#Structure> Structure</a>
+  * <a href= https://github.com/Nicolasdha/Farmer-Certified-Recipe-Application-API#Technologies>Technologies</a>
+  * <a href= https://github.com/Nicolasdha/Farmer-Certified-Recipe-Application-API#Launch>Launch</a>
+  * <a href= https://github.com/Nicolasdha/Farmer-Certified-Recipe-Application-API#Structure> Structure</a>
   
-    
 ### Technologies
 This application was created using the following technologies:
 
