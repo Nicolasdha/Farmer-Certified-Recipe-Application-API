@@ -30,7 +30,7 @@ This application was created using the following technologies:
 
 ### Launch
 
- This applicaiton is initalized using npm's gh-pages to be hosted on Github Pages. Please follow this hyperlink to be taken to where this application is hosted:
+ This application is initalized using npm's gh-pages to be hosted on Github Pages. Please follow this hyperlink to be taken to where this application is hosted:
  
  <a href= https://nicolasdha.github.io/Farmer-Certified-Recipe-Application-API/>https://NicolasDHa.Github.io/Farmer-Certified-Recipe-Application-API/</a>
 
