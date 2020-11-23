@@ -1,3 +1,10 @@
+![Logo](https://i.ibb.co/LP9qWSv/Farmer-Cert.png)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/mom-made-pizza-rolls.svg)](https://forthebadge.com)
+
+
 # Introduction
 Hello! This is a user-friendly recipe application that generates random recipes from around the world on each refresh (or logo click) of the page.
 You are able to search the database through API calls about a recipe's name, category, ingredients, or even where they originate from! Please utilize this application
@@ -48,7 +55,7 @@ Located on the top of the screen in the Navbar section there are two drop down m
 > Categories - This drop down menu gives users the ability to sort through different categories of meals to help quickly find exactly what they are looking for. 
 Perfect if you want new and exciting vegetarian meal, or if you can't decide what to make for breakfast.
 
-<br><br>The search bar is quite powerful with the ability to search for different locales, categories, meal names, or even ingredients you might want to use.
+The search bar is quite powerful with the ability to search for different locales, categories, meal names, or even ingredients you might want to use.
 
 Whenever you may get curious about a certain dish you just have to click on it, and that brings up a window with all of the ingredients and steps needed to crease the dish; all without taking you to a different page altogether. Almost every recipe has a YouTube video included with it to watch or follow along with as well. These provide useful insight from someone who is 
 very well versed in cooking this specific dish.
@@ -56,3 +63,4 @@ very well versed in cooking this specific dish.
 The database is created, hosted and provided by TheMealDB.Com
 
 Thank you for visiting! <br><br><br>
+![Logo](https://i.ibb.co/nr2trL4/Screen-Shot-2020-09-08-at-4-20-44-PM.png)
