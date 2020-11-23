@@ -1,0 +1,22 @@
+{
+  "name": "farmer-certified-recipe-application",
+  "version": "1.0.0",
+  "description": "Farmer Certified Recipe Application",
+  "main": "scripts.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolasdha/Farmer-Certified-Recipe-Application-API.git"
+  },
+  "author": "Nicolas Durik-Ha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolasdha/Farmer-Certified-Recipe-Application-API/issues"
+  },
+  "homepage": "https://Nicolasdha.github.io/Farmer-Certified-Recipe-Application-API",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
