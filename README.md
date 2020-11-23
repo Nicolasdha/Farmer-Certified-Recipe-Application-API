@@ -8,7 +8,7 @@
 # Introduction
 Hello! This is a user-friendly recipe application that generates random recipes from around the world on each refresh (or logo click) of the page.
 You are able to search the database through API calls about a recipe's name, category, ingredients, or even where they originate from! Please utilize this application
-to the fullest to learn more about recipes from different cultures, or to help break the everyday monotony of your kitchen's staples.
+to the fullest to learn more about recipes from different cultures, or to help break the everyday monotony of your go-to meals.
 
 ## Table of Contents
   * <a href= https://github.com/Nicolasdha/Farmer-Certified-Recipe-Application-API#Technologies>Technologies</a>
@@ -51,12 +51,11 @@ Located on the top of the screen in the Navbar section there are two drop down m
 > Locale - This drop down menu gives geographical locations throughout the world. Have you ever wondered what Canadian's eat other than Poutine? Click and find out!
 
 > Categories - This drop down menu gives users the ability to sort through different categories of meals to help quickly find exactly what they are looking for. 
-Perfect if you want new and exciting vegetarian meal, or if you can't decide what to make for breakfast.
+Perfect if you want a new and exciting vegetarian meal, or if you can't decide what to make for breakfast.
 
 The search bar is quite powerful with the ability to search for different locales, categories, meal names, or even ingredients you might want to use.
 
-Whenever you may get curious about a certain dish you just have to click on it, and that brings up a window with all of the ingredients and steps needed to crease the dish; all without taking you to a different page altogether. Almost every recipe has a YouTube video included with it to watch or follow along with as well. These provide useful insight from someone who is 
-very well versed in cooking this specific dish.
+Whenever you may get curious about a certain dish you just have to click on it, and that brings up a window with all of the ingredients and steps needed to create the dish; all without taking you to a different page altogether. Almost every recipe has a YouTube video included with it to watch or follow along with as well. These provide useful insight from someone who is well versed in cooking this specific dish.
 
 The database is created, hosted and provided by TheMealDB.Com
 
